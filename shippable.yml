@@ -1,9 +1,9 @@
 language: c
 
 compiler:
-  - gcc
-  - clang
-  
+  - gcc #gcc 7.3
+  - clang # clang 5.0.1
+
 build: 
 
   ci:
