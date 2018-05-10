@@ -1,11 +1,19 @@
-language: c
+language: clojure
 
-compiler:
-  - gcc #gcc 7.3
-  - clang # clang 5.0.1
-
-build: 
-
+lein:
+ - 1.3.0
+ - 1.4.0
+ - 1.5.1
+ - 1.6.0
+ - 1.7.0
+ - 1.8.0
+ - 1.9.0
+ 
+build:
+  pre_ci_boot:
+    image_name: drydock/u16cloall
+    image_tag: v6.4.4
+    pull: true
+    
   ci:
-    - ls
-    - pwd
+    - lein version 
